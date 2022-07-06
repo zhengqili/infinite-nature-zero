@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="3D Moments from Near-Duplicate Photos">
+  <meta name="keywords" content="3D Moments, view synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfiniteNatureZero</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">InfiniteNature-<font color="red">Zero </font> <br> Learning Perpetual View Generation of Natural Scenes from Single Images</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhengqili.github.io/">Zhengqi Li</a><sup>1</sup>, </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~qqw/">Qianqian Wang</a><sup>1,2</sup>, </span>
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~kanazawa/">Anjoo Kanazawa</a><sup>3</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Google Research &nbsp; </span>
+            <span class="author-block"><sup>2</sup>Cornell Tech, Cornell University &nbsp; </span>
+            <span class="author-block"><sup>3</sup>UC Berkeley</span>
+
+          </div>
+
+          <h1 style="font-size:24px;font-weight:bold">ECCV 2022</h1>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="static/pdfs/InfiniteNatureZero.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="xxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#overview_video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Supp Link. -->
+              <span class="link-block">
+                <a href="static/pdfs/supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Comming Soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center>
+      <video id="teaser" autoplay muted loop playsinline controls width="80%">
+        <source src="static/videos/teaser_video.mp4" type="video/mp4">
+      </video>
+      </center>
+      <h3 class="subtitle has-text-centered">
+        <span class="dnerf"> </span> By watching online photo collections, we learn perpeptural view generation from a single photo.
+      </h3>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/zoom-in_3988-0-1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/zoom-in_000357-0-1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/zoom-in_000301-0-1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay playsinline controls muted loop width="100%">
+            <source src="static/videos/000654_up-down-0-1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay playsinline controls muted loop width="100%">
+            <source src="static/videos/000204_side-0-1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          We present a method for learning to generate unbounded flythrough videos of natural scenes starting from a single view, where this capability is learned from a collection of single photographs, without requiring camera poses or even multiple views of each scene. To achieve this, we propose a novel self-supervised view generation training paradigm, where we sample and rendering virtual camera trajectories, including cyclic ones,  allowing  our  model  to  learn  stable  view  generation  froma collection of single views. At test time, despite never seeing a video during training, our approach can take a single image and generate long camera trajectories comprised of hundreds of new views with realistic and diverse contents. We compare our approach with recent state-of-the-art supervised view generation methods that require posed multi-view videos and demonstrate superior performance and synthesis quality.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<!-- <div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
+<img style='height: auto; width: 75%; object-fit: contain' src="static/images/overview.png" alt="overview_image">
+</div>  -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <a id="overview_video"></a>
+          <iframe src="static/videos/supp-video.mp4" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+ <br>
+  <br>
+<!-- 
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3"> More Results</h2>
+</div>
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video autoplay controls muted loop playsinline id="result_video_side" height="400px" width="auto" > 
+        <source type="video/mp4" src="static/videos/2558_side-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
+    </video>
+    <video  autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div>
+Tracking camera motion (horizontal) 
+</div>
+
+<br>
+
+<div id="wrapper" style="text-align:center;  padding: 2em 0;"> 
+    <video  autoplay controls muted loop playsinline id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/000679_up-down-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop playsinline id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/5428_up-down-0-1.mp4" /> 
+    </video>
+
+    <video  autoplay controls muted loop playsinline id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/000350_up-down-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+
+Tracking camera motion (vertical) 
+</div>
+
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video  autoplay controls muted loop playsinline id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_000204-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop playsinline id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_0161-0-1.mp4" /> 
+    </video>
+
+    <video  autoplay controls muted loop playsinline id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_000304-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+
+Zooming-In camera motion 
+</div>
+</section>
+
+<br>
+<br>
+
+<section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> Failure Cases</h2>
+    </div>
+<br>
+    <div id="wrapper" style="text-align:center;"> 
+    <video  autoplay controls muted loop playsinline id="failure_video"> 
+        <source type="video/mp4" src="static/videos/failure1.mp4" /> 
+    </video>
+&nbsp;&nbsp;
+    <video  autoplay controls muted loop playsinline id="failure_video"> 
+        <source type="video/mp4" src="static/videos/failure2.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+Our method cannot handle motions that are too large/challenging, and doesn't work well with incorrectly estimated monocular depths.
+
+</div>
+</section> -->
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@inproceedings{li2022_IFZ,
+  title     = {InfiniteNature-Zero: Learning Perpetual View Generation of Natural Scenes from Single Images},
+  author    = {Li, Zhengqi and Wang, Qianqian and Snavely, Noah and Kanazawa, Anjoo},
+  booktitle = {ECCV},
+  year      = {2022}
+}</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div align="center" class="container">
+    <div class="columns is-centered">
+        <div class="content">
+            This website is borrowed from <a href="https://github.com/3d-moments/3d-moments.github.io">3D Moments</a>.
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
