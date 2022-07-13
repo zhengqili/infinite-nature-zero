@@ -54,10 +54,10 @@
               <a href="https://www.cs.cornell.edu/~qqw/">Qianqian Wang</a><sup>1,2</sup>, </span>
             </span>
             <span class="author-block">
-              <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a><sup>*3</sup>,
+              <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a><sup>*1</sup>,
+              <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a><sup>3</sup>,
             </span>
           </div>
 
@@ -152,7 +152,7 @@
       <h3 class="subtitle has-text-centered">
         <font size="-1">
         <span class="dnerf"> </span> 
-        From only single photo collections, we learn perpetual view generation from a single image. 
+        From only single photo collections, we learn perpetual view generation from a RGB image 
         </font>
       </h3>
     </div>
@@ -165,50 +165,58 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px" width="auto">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/1381.mp4"
                     type="video/mp4">
           </video>
         </div>
 
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/1791.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/2690.mp4"
                     type="video/mp4">
           </video>
         </div>
+
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
+            <source src="static/videos/1055.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/0875.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/2262.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/1425.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/0002704_rl_hd.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-toby">
-          <video poster="" id="toby" autoplay playsinline controls muted loop height="512px">
+          <video poster="" id="toby" autoplay playsinline controls muted loop height="320px">
             <source src="static/videos/0003088_hd.mp4"
                     type="video/mp4">
           </video>
@@ -277,7 +285,7 @@
 <br>
 
 <div id="wrapper" style="text-align:center;"> 
-    <video autoplay controls muted loop playsinline id="result_video_side" height="512px" width="auto" > 
+    <video autoplay controls muted loop playsinline id="result_video_side" height="320px" width="auto" > 
         <source type="video/mp4" src="static/videos/2558_side-0-1.mp4" /> 
     </video>
 
@@ -362,7 +370,7 @@ Our method cannot handle motions that are too large/challenging, and doesn't wor
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-@inproceedings{li2022_IFZ,
+@inproceedings{li2022_infinite_nature_zero,
   title     = {InfiniteNature-Zero: Learning Perpetual View Generation of Natural Scenes from Single Images},
   author    = {Li, Zhengqi and Wang, Qianqian and Snavely, Noah and Kanazawa, Angjoo},
   booktitle = {ECCV},

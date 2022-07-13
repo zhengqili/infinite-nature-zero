@@ -113,23 +113,29 @@ body {
 .results-carousel {
   overflow: hidden;
   margin: auto;
+  height: auto;
+  width: auto;
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: 1px;
   overflow: hidden;
-  border: 1px solid #bbb;
+  border: 0px solid #bbb;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
+  height: 320px;
+  width: 320px;
 /*  display: flex;
   background-color: rgba(0, 0, 0, 1);
   flex-basis: fit-content;
-  height: 583px;*/
+  height: 320px;*/
 }
 
 .results-carousel video {
   margin: 0 auto;
+  height: 320px;
+  width: 320px;
 }
 
 
